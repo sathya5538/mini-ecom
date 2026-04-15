@@ -1,0 +1,163 @@
+<!-- HERO SECTION -->
+<section class="offers-hero">
+  <div class="container-full">
+    <div class="promo-badge">🔥 LIMITED TIME OFFERS</div>
+    <h1>Exclusive Deals on Premium Chairs</h1>
+    <p>Find the perfect ergonomic chair for your budget. All with 30-day returns and 1-year warranty.</p>
+  </div>
+</section>
+
+<!-- OFFERS GRID -->
+<section class="offers-section">
+  <div class="container-full">
+    <div class="offers-grid">
+      <div *ngFor="let deal of deals" [class.featured]="deal.id === 1" class="offer-card">
+        <div class="offer-badge">{{ deal.badge }}</div>
+
+        <h2 class="offer-name">{{ deal.name }}</h2>
+
+        <div class="offer-pricing">
+          <span class="original-price">₹{{ deal.original }}</span>
+          <span class="discount-price">₹{{ deal.discount }}</span>
+          <span class="save-amount">SAVE ₹{{ deal.original - deal.discount }}</span>
+        </div>
+
+        <div class="offer-features">
+          <h3>Includes:</h3>
+          <ul>
+            <li *ngFor="let feature of deal.features">✓ {{ feature }}</li>
+          </ul>
+        </div>
+
+        <div class="offer-benefits">
+          <p>🚚 Free Delivery</p>
+          <p>↩️ 30-Day Returns</p>
+          <p>✓ 1-Year Warranty</p>
+        </div>
+
+        <button class="cta-btn" [class.primary]="deal.id === 1">Buy Now at ₹{{ deal.discount }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE SECTION -->
+<section class="why-section">
+  <div class="container-full">
+    <h2 class="section-title">Why Our Customers Love ErgoMaster</h2>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">⭐</div>
+        <h3>4.8/5 Rating</h3>
+        <p>From 1000+ verified customers</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🚀</div>
+        <h3>Fast Shipping</h3>
+        <p>Delivered in 3-5 business days</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">💰</div>
+        <h3>Best Prices</h3>
+        <p>Guaranteed lowest prices on market</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🛡️</div>
+        <h3>Risk-Free</h3>
+        <p>Money-back guarantee if unsatisfied</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON SECTION -->
+<section class="comparison-section">
+  <div class="container-full">
+    <h2 class="section-title">Compare Our Models</h2>
+
+    <div class="comparison-table">
+      <div class="table-header">
+        <div>Feature</div>
+        <div>Basic</div>
+        <div>Pro</div>
+        <div>Elite</div>
+      </div>
+
+      <div class="table-row">
+        <div class="feature-name">Lumbar Support</div>
+        <div>✓ Basic</div>
+        <div class="highlight">✓ Premium</div>
+        <div>✓ Advanced</div>
+      </div>
+
+      <div class="table-row">
+        <div class="feature-name">Height Adjustment</div>
+        <div>Manual</div>
+        <div class="highlight">Pneumatic</div>
+        <div>Electronic</div>
+      </div>
+
+      <div class="table-row">
+        <div class="feature-name">Material</div>
+        <div>Standard Mesh</div>
+        <div class="highlight">Premium Mesh</div>
+        <div>Premium Fabric</div>
+      </div>
+
+      <div class="table-row">
+        <div class="feature-name">Price</div>
+        <div>₹2,999</div>
+        <div class="highlight">₹4,999</div>
+        <div>₹5,999</div>
+      </div>
+
+      <div class="table-row">
+        <div class="feature-name">Warranty</div>
+        <div>6 Months</div>
+        <div class="highlight">1 Year</div>
+        <div>2 Years</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container-full">
+    <h2 class="section-title">Success Stories</h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Worth every penny. My back pain is gone and I can focus on work instead of discomfort."</p>
+        <p class="author">— Rajesh K., Software Engineer</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Excellent quality and delivery was super fast. The chair feels premium and is so comfortable!"</p>
+        <p class="author">— Priya M., Freelancer</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Best ergonomic chair I've used. After 8 hours, my back feels fresh. Highly recommend!"</p>
+        <p class="author">— Amit P., Designer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="closing-cta">
+  <div class="container-full">
+    <h2>Don't Miss Out on These Deals!</h2>
+    <p>Limited units available. Order now and get free delivery.</p>
+    <button class="cta-btn large">Explore All Offers</button>
+  </div>
+</section>
+
